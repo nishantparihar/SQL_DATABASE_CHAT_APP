@@ -95,7 +95,7 @@ def main():
                 ''')
 
             st.markdown('''
-                Developed by [Nishant Singh Parihar](https://nishantparihar.github.io/)
+                ## Developed by [Nishant Singh Parihar](https://nishantparihar.github.io/)
                 ''')
 
 
