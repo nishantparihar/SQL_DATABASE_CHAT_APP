@@ -94,6 +94,10 @@ def main():
                 - [OpenAI](https://platform.openai.com/docs/models) LLM model
                 ''')
 
+            st.markdown('''
+                Developed by [Nishant Singh Parihar](https://nishantparihar.github.io/)
+                ''')
+
 
 
     st.title("Chat with PDF 💬")
