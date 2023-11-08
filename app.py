@@ -16,6 +16,7 @@ from langchain.prompts.chat import ChatPromptTemplate
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
+
 #DataBase connection
 from langchain import OpenAI, SQLDatabase
 import pyodbc
@@ -73,7 +74,7 @@ def main():
             st.markdown(prompt)
         
         st.session_state.chat_history.append({"role":"Human",  "content": prompt})
-        llm = OpenAI(model_name='gpt-3.5-turbo', temperature=0)
+        llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0)
 
         toolkit = SQLDatabaseToolkit(db=db,llm=llm)
         toolkit.get_tools()
@@ -83,7 +84,7 @@ def main():
                             toolkit=toolkit,
                             handle_parsing_errors=True,
                             verbose=True,
-                            agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+                           
                             )
 
         with get_openai_callback() as cb:
