@@ -6,6 +6,6 @@ streamlit-extras
 altair<5
 pytesseract
 pdf2image
-openai
+openai==1.1.1
 tiktoken==0.5.1
 pyodbc
